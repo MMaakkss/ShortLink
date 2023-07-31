@@ -37,7 +37,7 @@ const config = useRuntimeConfig();
 let isCopied = ref<Boolean>(false);
 
 const copyLink = () => {
-  navigator.clipboard.writeText(`${config.public.appUrl}/${props.link.key}`);
+  navigator.clipboard.writeText(config.public.appUrl + props.link.key);
   isCopied.value = true;
 
   setTimeout(() => {
