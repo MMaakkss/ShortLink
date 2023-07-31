@@ -93,7 +93,7 @@ const loginWithGitHub = async () => {
   try {
     const { error } = await supabaseAuth.auth.signInWithOAuth({
       provider: "github",
-      options: { redirectTo: "http://localhost:3000/" },
+      options: { redirectTo: "https://short-link-delta.vercel.app/" },
     });
 
     if (error) errorMessage.value = error.message;
@@ -140,7 +140,7 @@ const signUp = async () => {
     const { data, error } = await supabaseAuth.auth.signUp({
       ...formData.value,
       options: {
-        emailRedirectTo: "http://localhost:3000/dashboard",
+        emailRedirectTo: "https://short-link-delta.vercel.app/dashboard",
       },
     });
 
