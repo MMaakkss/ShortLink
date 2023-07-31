@@ -4,7 +4,7 @@ export default function useExternalRedirect(
   url: string,
   code: number = 302
 ): Promise<void> {
-  if (!/^(https?:\/\/)/.test(url)) {
+  if (!/^(http?:\/\/)/.test(url)) {
     if (process.server) {
       const nuxtApp = useNuxtApp();
 
