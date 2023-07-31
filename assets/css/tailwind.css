@@ -12,11 +12,9 @@ body::before {
   content: "";
   position: fixed;
   z-index: -1;
-  background: radial-gradient(
-    75.61% 75.61% at 50% 24.39%,
-    rgba(9, 180, 57, 0.2) 0%,
-    rgba(9, 180, 139, 0) 100%
-  );
+  background: radial-gradient(75.61% 75.61% at 50% 24.39%,
+      rgba(9, 180, 57, 0.2) 0%,
+      rgba(9, 180, 139, 0) 100%);
 }
 
 .container {
@@ -32,11 +30,9 @@ body::before {
 }
 
 .heading {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0) 188.28%
-  );
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 188.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -44,7 +40,7 @@ body::before {
 }
 
 .card {
-  @apply min-w-[280px] bg-white/5 rounded-xl shadow-lg p-5 border border-white/10;
+  @apply min-w-[360px] bg-white/5 rounded-xl shadow-lg p-5 border border-white/10;
 }
 
 input {
@@ -57,4 +53,24 @@ form label {
 
 .form-group {
   @apply mb-5 last:mb-0;
+}
+
+.hover-effect {
+  @apply hover:text-white/70;
+  transition: 0.2s ease-in-out;
+}
+
+.notification-enter-active,
+.notification-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.notification-leave-active {
+  transition-delay: 0.25s;
+}
+
+.notification-enter-from,
+.notification-leave-to {
+  transform: translateY(-50px);
+  opacity: 0;
 }
